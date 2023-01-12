@@ -2,15 +2,13 @@
     <div class="toolbar-filter"> &nbsp;&nbsp;
         <mat-form-field style="width: 40%">
             <mat-label>Nom Complet</mat-label>
-            <input maptInput (keyup)="applyFilter($event)" placeholder="Entrez le début d'un nom" />
+            <input matInput (keyup)="applyFilter($event)" placeholder="Entrez le début d'un nom" />
         </mat-form-field>
         &nbsp;&nbsp;
         <mat-slide-toggle [checked]="unactiveSelected" (change)="unactiveChanged($event)">
             Utilisateur désactivé uniquement
         </mat-slide-toggle>
     </div>
-
-
 
 
     <table mat-table [dataSource]="dataSource">
@@ -29,8 +27,8 @@
             <th mat-header-cell *matHeaderCellDef>Numero</th>
             <th mat-cell *matCellDef="let element">{{element.employeNumero}}</th>
         </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[25,50]" showFirstLastButtons>
     </mat-paginator>
