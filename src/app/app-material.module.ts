@@ -11,6 +11,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   exports: [
@@ -26,6 +29,9 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatPaginatorModule,
     MatTableModule,
+    MatTooltipModule,
+    MatSelectModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class AppMaterialModule {}

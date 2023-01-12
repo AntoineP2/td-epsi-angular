@@ -28,7 +28,7 @@
             <th mat-cell *matCellDef="let element">{{element.employeNumero}}</th>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns" (click)="edit(row.login)"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[25,50]" showFirstLastButtons>
     </mat-paginator>
